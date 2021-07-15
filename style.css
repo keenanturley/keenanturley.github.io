@@ -52,12 +52,14 @@ body.jamming {
 }
 
 #jam-button {
-  width: 5rem;
-  height: 2rem;
+  width: 10rem;
+  height: 3rem;
 
   position: relative;
   top: 50%;
   left: 50%;
-  margin-top: -1rem;
-  margin-left: -2.5rem;
+  margin-top: -1.5rem;
+  margin-left: -5rem;
+  
+  font-size: 1rem;
 }

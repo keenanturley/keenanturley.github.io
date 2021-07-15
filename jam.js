@@ -25,4 +25,11 @@ const startJamming = () => {
   }, (1000 * timeToPump) / (maxPump / pump));
 }
 
+const allowJamming = () => {
+  console.log('allow jamming');
+  jamButton.innerText = 'Open Portfolio';
+  jamButton.removeAttribute('disabled');
+}
+
+jam.addEventListener('canplay', allowJamming);
 jamButton.addEventListener('click', startJamming);
