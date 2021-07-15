@@ -1,9 +1,23 @@
 body {
   background-color: black;
+  height: 100vh;
+  margin: 0;
+}
+
+body.jammer {
   background-image: url('./images/catJam.gif');
   background-size: 100vw 100vh;
   background-position-x: 0vw;
   background-position-y: 0vh;
+}
+
+body.pre-jam {
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation-name: pre-jam;
+  animation-duration: 32s;
+  animation-timing-function: ease-in;
 }
 
 body.jamming {
@@ -14,6 +28,15 @@ body.jamming {
   animation-iteration-count: infinite;
 }
 
+@keyframes pre-jam {
+  from {
+    background-size: 0vh 0vh;
+  }
+  to {
+    background-size: 100vw 100vh;
+  }
+}
+
 @keyframes jam {
   from {
     background-size: 100vw 100vh;
@@ -22,8 +45,19 @@ body.jamming {
   }
 
   to {
-    background-size: 10vw 10vh;
+    background-size: 10vh 10vh;
     background-position-x: 45vw;
     background-position-y: 45vh;
   }
+}
+
+#jam-button {
+  width: 5rem;
+  height: 2rem;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -1rem;
+  margin-left: -2.5rem;
 }
